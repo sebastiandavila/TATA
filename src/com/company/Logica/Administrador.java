@@ -6,4 +6,9 @@ public class Administrador extends Persona {
         super(Nombre, Apellido);
     }
 
+    @Override
+    public String MostrarDatos()
+    {
+        return "Administrador: " + Nombre + " " + Apellido;
+    }
 }

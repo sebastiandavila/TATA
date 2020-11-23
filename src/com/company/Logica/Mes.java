@@ -10,33 +10,40 @@ public class Mes {
     }
 
     public Mes(String Nombre){
+
         this.Nombre = Nombre;
     }
 
     public String getNombre() {
+
         return Nombre;
     }
 
     public double getGanancia() {
+
         return Ganancia;
     }
 
     public void setNombre(String Nombre) {
+
         this.Nombre = Nombre;
     }
 
     public void setGanancia(double Ganancia) {
+
         this.Ganancia = Ganancia;
     }
 
 
     public void CalcularGananciaFebrero(double GananciaEnero)
     {
+
         Ganancia = GananciaEnero / 2;
     }
 
     public void CalcularGananciaMarzo(double GananciaEnero)
     {
+
         Ganancia = GananciaEnero * 2;
     }
 

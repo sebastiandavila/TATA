@@ -13,36 +13,45 @@ public class Empleado extends Persona{
     }
 
     public long getCelular() {
+
         return Celular;
     }
 
     public String getCiudad() {
+
         return Ciudad;
     }
 
     public float getIngresoMensual() {
+
         return IngresoMensual;
     }
 
     public void setCelular(long Celular) {
+
         this.Celular = Celular;
     }
 
     public void setCiudad(String Ciudad) {
+
         this.Ciudad = Ciudad;
     }
 
     public void setIngresoMensual(float IngresoMensual) {
+
         this.IngresoMensual = IngresoMensual;
     }
 
     public float CalcularIngresoTrimestral(){
+
         return IngresoMensual * 3;
     }
     public float CalcularIngresoSemestral(){
+
         return IngresoMensual * 6;
     }
     public double CalcularIngresoAnual(){
+
         return IngresoMensual * 12;
     }
 
@@ -53,5 +62,14 @@ public class Empleado extends Persona{
         else{
             return IngresoMensual / 2;
         }
+    }
+    @Override
+    public String MostrarDatos()
+    {
+        return "Informacion del empleado: "+"\n"+
+                "Nombre: " + Nombre + " " + Apellido + "\n" +
+                "Celular: "+Celular+ "\n" +
+                "Ciudad: "+Ciudad + "\n" +
+                "Ingresos mensuales: "+IngresoMensual;
     }
 }

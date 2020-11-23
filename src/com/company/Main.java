@@ -14,7 +14,8 @@ public class Main {
 
             opciones = Integer.parseInt(JOptionPane.showInputDialog("Opciones \n "
                     + "1.Generar reporte \n "
-                    + "2.Generar informe de pago de impuestos "));
+                    + "2.Generar informe de pago de impuestos \n"
+                    + "100. Salir"));
 
             switch (opciones) {
                 case 1:
@@ -55,7 +56,7 @@ public class Main {
                             Junio.getGanancia();
 
                     JOptionPane.showMessageDialog(null, "------------Reporte------------" + "\n" +
-                            "Administrador: " + administrador.getNombre() + " " + administrador.getApellido() + "\n" + "\n" +
+                            administrador.MostrarDatos()+ "\n" + "\n" +
                             "Ganancia de cada mes: " + "\n" +
                             Enero.getNombre() + ": " + Enero.getGanancia() + "\n" +
                             Febrero.getNombre() + ": " + Febrero.getGanancia() + "\n" +
@@ -80,11 +81,7 @@ public class Main {
                         Empleado empleado = new Empleado(NombreEmpleado, ApellidoEmpleado, Celular, Ciudad, IngresoMensualEmpleado);
 
                         JOptionPane.showMessageDialog(null, "------------Reporte del pago de impuestos------------" + "\n" +
-                                "Informacion del empleado: "+"\n"+
-                                "Nombre: " + empleado.getNombre() + " " + empleado.getApellido() + "\n" +
-                                 "Celular: "+empleado.getCelular()+ "\n" +
-                                "Ciudad: "+empleado.getCiudad() + "\n" +
-                                "Ingresos mensuales: "+empleado.getIngresoMensual()+"\n" +
+                                empleado.MostrarDatos()+"\n" +
                                 "Ingresos trimestrales: "+empleado.CalcularIngresoTrimestral()+"\n" +
                                 "Ingresos semestral: "+empleado.CalcularIngresoSemestral()+"\n" +
                                 "Ingresos por año: "+empleado.CalcularIngresoAnual()+"\n" +"\n" +
